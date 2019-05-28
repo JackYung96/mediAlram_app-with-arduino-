@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_which_medi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/type"
+    tools:context="com.example.jaegyengjo.medino.AlarmSet.WhichMedi">
+
+
+    <Button
+        android:id="@+id/pill"
+        android:text="일반 약"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:onClick="on/Click"
+        android:layout_above="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="86dp"
+        android:background="@drawable/buttonshape"/>
+
+    <Button
+        android:id="@+id/next"
+        android:text="next"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:onClick="on/Click"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/pill"
+        android:background="@drawable/buttonshape"/>
+
+    <Button
+        android:id="@+id/bottle"
+        android:text="약 병"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:onClick="on/Click"
+        android:layout_marginBottom="88dp"
+        android:layout_above="@+id/pill"
+        android:layout_alignStart="@+id/pill"
+        android:background="@drawable/buttonshape"/>
+
+
+</RelativeLayout>

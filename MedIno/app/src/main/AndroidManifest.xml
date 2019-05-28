@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jaegyengjo.medino">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconmain"
+        android:label="MedIno"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AlarmSet.WhichMedi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlarmSet.WeekSet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlarmSet.HourSet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlarmSet.MinuteSet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".arduinoSend"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlarmSet.MemoSet"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".AlarmSet.BroadcastD" />
+        <receiver android:name=".AlarmSet.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AlarmSet.Result"
+                   android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
